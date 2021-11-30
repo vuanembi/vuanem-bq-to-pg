@@ -59,5 +59,5 @@ caresoft_leads_telesales = caresoft(
 )
 caresoft_leads_telesales_source = caresoft(
     f"SELECT * FROM OP_CDP.CDP_LEADS_TELESALES_SOURCE",
-    "backup_CDP_LEADS_TELESALES_SOURCE",
+    "CDP_LEADS_TELESALES_SOURCE",
 )
