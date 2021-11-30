@@ -25,14 +25,14 @@ jobs:
       - name: Set env vars (dev)
         if: endsWith(github.ref, '/dev')
         run: |
-          echo "FUNCTION_NAME=vuanem-bq-to-bg-dev" >> $GITHUB_ENV
-          echo "PUBLIC_URL=https://us-central1-voltaic-country-280607.cloudfunctions.net/vuanem-bq-to-bg-dev" >> $GITHUB_ENV
+          echo "FUNCTION_NAME=vuanem-bq-to-pg-dev" >> $GITHUB_ENV
+          echo "PUBLIC_URL=https://us-central1-voltaic-country-280607.cloudfunctions.net/vuanem-bq-to-pg-dev" >> $GITHUB_ENV
 
       - name: Set env vars (prod)
         if: endsWith(github.ref, '/master')
         run: |
-          echo "FUNCTION_NAME=vuanem-bq-to-bg" >> $GITHUB_ENV
-          echo "PUBLIC_URL=https://us-central1-voltaic-country-280607.cloudfunctions.net/vuanem-bq-to-bg" >> $GITHUB_ENV
+          echo "FUNCTION_NAME=vuanem-bq-to-pg" >> $GITHUB_ENV
+          echo "PUBLIC_URL=https://us-central1-voltaic-country-280607.cloudfunctions.net/vuanem-bq-to-pg" >> $GITHUB_ENV
 
       - name: Deploy to Cloud Functions
         run: >-

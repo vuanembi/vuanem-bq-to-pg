@@ -22,4 +22,4 @@ def test_tasks():
     res = run({
         "task": "bq-to-pg",
     })
-    assert res['tasks'] > 0
+    assert res['task'] > 0
