@@ -1,3 +1,5 @@
+from libs.tasks import create
+
 TABLES = [
     "netsuite__classes",
     "netsuite__customers3",
@@ -9,3 +11,9 @@ TABLES = [
     "caresoft_leads_telesales",
     "caresoft_leads_telesales_source",
 ]
+
+
+def create_tasks():
+    return {
+        "task": create(TABLES),
+    }
