@@ -4,7 +4,7 @@ TABLES = [
     "netsuite__classes",
     "netsuite__customers3",
     "netsuite__items",
-    "netsuite__leads_logged",
+    # "netsuite__leads_logged",
     "netsuite__locations",
     "netsuite__rfm",
     "netsuite__rfm_cx",
