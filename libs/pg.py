@@ -32,6 +32,8 @@ def copy(
     columns = [i for i in rows[0].keys()]
     column_names = ",".join([f'"{i}"' for i in columns])
     cur.execute(f'TRUNCATE TABLE "{schema}"."{table}"')
-    copy_stmt = f'COPY "{schema}"."{table}" ({column_names}) FROM STDIN WITH (FORMAT CSV, HEADER TRUE)'
+    copy_stmt = f"""
+    COPY "{schema}"."{table}" ({column_names}) FROM STDIN WITH (FORMAT CSV, HEADER TRUE)
+    """
     cur.copy_expert(copy_stmt, dump_csv(rows, columns))
     return cur

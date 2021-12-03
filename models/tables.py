@@ -61,3 +61,18 @@ caresoft_leads_telesales_source = caresoft(
     f"SELECT * FROM OP_CDP.CDP_LEADS_TELESALES_SOURCE",
     "CDP_LEADS_TELESALES_SOURCE",
 )
+caresoft_leads_tele_c2c = caresoft(
+    f"""
+    SELECT
+        ticket_id,
+        updated_at,
+        created_at,
+        Lead_type,
+        TO_JSON_STRING(requester) AS requester,
+        TO_JSON_STRING(ccs) AS ccs,
+        TO_JSON_STRING(follows) AS follows,
+        TO_JSON_STRING(comments) AS comments,
+    FROM OP_CDP.CDP_LEADS_TELE_C2C
+    """,
+    "CDP_LEADS_TELE_C2C",
+)
