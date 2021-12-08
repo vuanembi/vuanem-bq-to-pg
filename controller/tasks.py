@@ -11,6 +11,7 @@ TABLES = [
     "caresoft_leads_telesales",
     "caresoft_leads_telesales_source",
     "caresoft_leads_tele_c2c",
+    "caresoft_leads_tele_coldlead",
 ]
 
 

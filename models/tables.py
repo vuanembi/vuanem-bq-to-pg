@@ -76,3 +76,21 @@ caresoft_leads_tele_c2c = caresoft(
     """,
     "CDP_LEADS_TELE_C2C",
 )
+caresoft_leads_tele_coldlead = caresoft(
+    f"""
+    SELECT
+        ticket_id,
+        updated_at,
+        created_at,
+        Lead_type,
+        customer_phone,
+        customer_email,
+        customer_name,
+        TO_JSON_STRING(ccs) AS ccs,
+        TO_JSON_STRING(follows) AS follows,
+        TO_JSON_STRING(comments) AS comments,
+        campaign_name,
+    FROM OP_CDP.CDP_LEADS_TELE_COLDLEAD
+    """,
+    "CDP_LEADS_TELE_COLDLEAD",
+)
