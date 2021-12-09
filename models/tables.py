@@ -94,3 +94,8 @@ caresoft_leads_tele_coldlead = caresoft(
     """,
     "CDP_LEADS_TELE_COLDLEAD",
 )
+
+netsuite__sales_order_lines = netsuite(
+    f"SELECT * FROM OP_CDP.NetSuite__SalesOrderLines",
+    "NetSuite__SalesOrderLines",
+)
